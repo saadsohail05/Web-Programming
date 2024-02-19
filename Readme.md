@@ -12,10 +12,14 @@ Welcome to my Web Programming repository! This repository contains all my assign
 
 This project utilizes the following technologies:
 
-- **JavaScript:** Used for client-side scripting. ![JavaScript Logo](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-- **HTML:** Markup language for structuring web content. ![HTML Logo](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-- **CSS:** Stylesheets to enhance the visual presentation. ![CSS Logo](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-- **Bootstrap:** Front-end framework for responsive and modern design. ![Bootstrap Logo](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+- **JavaScript:** Used for client-side scripting.
+ ![JavaScript Logo](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+- **HTML:** Markup language for structuring web content. 
+![HTML Logo](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+- **CSS:** Stylesheets to enhance the visual presentation. 
+![CSS Logo](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+- **Bootstrap:** Front-end framework for responsive and modern design. 
+![Bootstrap Logo](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 These technologies come together to create a dynamic and visually appealing web experience. Explore the code to see how they are implemented in different assignments and class activities.
 ## Installation
