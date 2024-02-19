@@ -1,0 +1,264 @@
+* {
+    text-decoration: none;
+
+}
+body {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+}
+.header {
+    background-color: orange;
+    overflow: hidden;
+    border-radius: 40px;
+    height: 80px;
+    width: 100%;
+}
+.head {
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px;
+
+}
+.logo-icon {
+    display: flex;
+    align-items: center;
+    width: 45%;
+}
+
+.settings {
+    width: 30px;
+    padding-top: 5px;
+    padding-left: 20px;
+    border: none;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    height: 50px;
+    gap: 40px;
+    align-items: center;
+}
+
+.navbtn {
+    color: black;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: color 0.1s;
+}
+.navbtn:hover {
+    border-bottom: 1px solid white;
+    color: #616786;
+
+}
+.navbtn:visited {
+    color: purple;
+}
+.navbtn:active {
+    background-color: lightgray;
+    border: 1px solid black;
+
+}
+.menuicon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+}
+.menu-button {
+
+    padding-top: 5px;
+    margin-left: 50px;
+    background: transparent;
+
+}
+
+@media screen and (max-width: 1100px) {
+    .nav {
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 907px) {
+    .nav {
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 798px) {
+    .nav {
+        gap: 5px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .settings {
+        display: none;
+    }
+    .navbtn {
+        display: none;
+    }
+
+}
+@media screen and (min-width: 750px) {
+    .menu-button {
+        display: none;
+    }
+
+}
+.mainsection {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    align-items: center;
+    margin: 70px;
+}
+.rightcontent {
+    text-align: center;
+}
+.label {
+    font-size: 15px;
+    color: darkmagenta;
+}
+.title {
+    font-size: 40px;
+
+}
+.description {
+    color: grey;
+
+}
+.leftcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgcontainer {
+    border-radius: 50px;
+    overflow: hidden;
+    height: 400px;
+    width: 500px;
+
+}
+.leftcontent2 {
+    text-align: center;
+
+}
+
+.image1 {
+
+    height: 100%;
+    width: 100%;
+}
+.rightcontent2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.mainsection2 {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    align-items: center;
+    margin: 70px;
+
+}
+@media screen and (min-width: 770px) {
+    .mainsection {
+
+        flex-direction: row;
+
+    }
+
+    .rightcontent {
+        max-width: 50%;
+        text-align: right;
+
+    }
+    .title {
+        padding-right: 10;
+        font-size: 50px;
+    }
+    .leftcontent2 {
+        max-width: 50%;
+        text-align: left;
+    }
+    .mainsection2 {
+        flex-direction: row;
+
+    }
+
+}
+@media screen and (max-width: 770px) {
+    .copyright {
+        max-width: 89%;
+    }
+    .upbox {
+
+        max-width: 102%;
+
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 37, 47);
+    color: white;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    width: 1305px;
+
+}
+.upbox {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    background-color: rgb(44, 62, 80);
+    height: 200px;
+    padding-bottom: 10px;
+}
+.location {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 100px;
+}
+.social {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.social h4 {
+    padding-bottom: 10px;
+}
+.about {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 140px;
+    width: 120px;
+
+}
+.about h4 {
+    padding-top: 10px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
