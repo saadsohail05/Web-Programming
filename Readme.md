@@ -1,4 +1,4 @@
-# Web Programming Repository
+# Web Programming
 
 Welcome to my Web Programming repository! This repository contains all my assignments and class activities for the Web Programming course. Feel free to explore the different branches and folders to check out the code and progress throughout the course.
 
