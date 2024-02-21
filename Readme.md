@@ -15,15 +15,14 @@ I've made a comprehensively styled Sign in and Sign Up page using HTML and CSS3,
 ![alt text](<Task 01 Screenshot 4.png>)
 ![alt text](<Task 01 Screenshot 6.png>)
 
-
-
-
-
 ## Task 02 : BootStrap Page
 ### Description
-
+I've made a made a web page using HTML,CSS and Bootstrap while using grid system, alerts and buttons in Bootstrap.Additionally, the page has been made responsive.
 
 ### Screenshots
+![alt text](<Task 02 Screenshot 1.png>)
+![alt text](<Task 02 Screenshot 2.png>)
+![alt text](<Task 02 Screenshot 3.png>)
 
 
 
