@@ -75,8 +75,8 @@
                 let usernameRegex = /^[a-zA-Z_][a-zA-Z0-9_]{2,19}$/;
                 let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
                 let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-                let phoneregex = /^((\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$/;
-
+                let phoneregex = /^\+\d{11}$/;
+                let zipregex = /^\d{4}$/;
     
                 if (!usernameRegex.test(document.getElementById('box1').value)) {
                     alert("Username must start with letter and should be greater than 3 characters.");
@@ -90,6 +90,14 @@
     
                 if (!passwordRegex.test(document.getElementById('box3').value)) {
                     alert("Password must be at least 8 characters long and include at least one letter and one number.");
+                    return false;
+                }
+                if (!phoneregex.test(document.getElementById('box5').value)) {
+                    alert("Invalid Phone Number.Must start with + and contain exactly 11 digits");
+                    return false;
+                }
+                if (!zipregex.test(document.getElementById('box6').value)) {
+                    alert("Invalid Zip Code.Must Contain 4 digits");
                     return false;
                 }
                 
