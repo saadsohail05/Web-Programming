@@ -13,17 +13,17 @@
     <body>
         <div class="container">
             <div class="signup">
-                <form action="register" id="form1">
+                <form action="register" id="form1" >
                     <h1>Create Account</h1>
 
-                    <input id="box1" type="text" name="text" placeholder="Username" required="">
-                    <input id="box2" type="email" name="email" placeholder="Email" required="">
-                    <input id="box3" type="password"  name="password" placeholder="Password" required="">
-                    <input id="box4" type="date"  name="date" placeholder="hwllo" required="">
-                    <input type="tel" id="box5" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" placeholder="Phone Number"><br>
-                    <input type="text" id="box6" name="zip" pattern="[0-9]{5}" required="" placeholder="Zip Code"><br>
+                    <input id="box1" type="text" name="text" placeholder="Username" required >
+                    <input id="box2" type="email" name="email" placeholder="Email" required>
+                    <input id="box3" type="password"  name="password" placeholder="Password" required>
+                    <input id="box4" type="date"  name="date"  required="">
+                    <input type="tel" id="box5" name="phone"  placeholder="Phone Number" required><br>
+                    <input type="text" id="box6" name="zip"  placeholder="Zip Code" required><br>
                     <label for="country">Choose your country:</label><br>
-                    <select id="country" name="country">
+                    <select id="country" name="country" required>
                         <option value="us">United States</option>
                         <option value="ca">Canada</option>
                         <option value="uk">United Kingdom</option>
@@ -37,11 +37,11 @@
                         <option value="other">Other</option>
                     </select><br>
                     <label for="gender">Choose your gender:</label><br>
-                    <select id="gender" name="gender">
+                    <select id="gender" name="gender" required>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select><br>
-                    <button class="btn">Sign Up</button>
+                    <button class="btn" onclick="submitForm()">Sign Up</button>
 
                     <p id="acc">Already have an account ?
                         <a class="loginbtn" href="signin.html">Login</a>
@@ -61,5 +61,24 @@
 
         </div>
 
+<script>
+    let inputs = document.querySelectorAll('input[required]');
+
+    function validateForm(){ 
+        for (var i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value) {
+                    alert("Please fill in all Required fields.");
+                    return false;
+                }
+            }
+            
+            return true;
+
+
+    }
+    function submitForm() {
+            validateForm();
+        }
+</script>
     </body>
 </html>
