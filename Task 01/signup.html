@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="style.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="signup">
+                <form action="register" id="form1">
+                    <h1>Create Account</h1>
+
+                    <input id="box1" type="text" name="text" placeholder="Username" required="">
+                    <input id="box2" type="email" name="email" placeholder="Email" required="">
+                    <input id="box3" type="password"  name="password" placeholder="Password" required="">
+                    <input id="box4" type="date"  name="date" placeholder="hwllo" required="">
+                    <input type="tel" id="box5" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" placeholder="Phone Number"><br>
+                    <input type="text" id="box6" name="zip" pattern="[0-9]{5}" required="" placeholder="Zip Code"><br>
+                    <label for="country">Choose your country:</label><br>
+                    <select id="country" name="country">
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                        <option value="de">Germany</option>
+                        <option value="fr">France</option>
+                        <option value="cn">China</option>
+                        <option value="in">Pakistan</option>
+                        <option value="br">Brazil</option>
+                        <option value="ru">Russia</option>
+                        <option value="other">Other</option>
+                    </select><br>
+                    <label for="gender">Choose your gender:</label><br>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br>
+                    <button class="btn">Sign Up</button>
+
+                    <p id="acc">Already have an account ?
+                        <a class="loginbtn" href="signin.html">Login</a>
+                    </p>
+                </form>
+
+            </div>
+            <div class="slidingcontainer">
+                <div class="slide">
+                    <div class="slideleft">
+                        <h1 id="head">WELCOME BACK!</h1>
+                        <p>Create your account now to access premium features and personalized content</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
