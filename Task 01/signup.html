@@ -61,24 +61,51 @@
 
         </div>
 
-<script>
-    let inputs = document.querySelectorAll('input[required]');
+        <script>
+            let inputs = document.querySelectorAll('input[required]');
+    
+            function validateForm() {
+                for (var i = 0; i < inputs.length; i++) {
+                    if (!inputs[i].value) {
+                        alert("Please fill in all Required fields.");
+                        return false;
+                    }
+                }
+    
+                let usernameRegex = /^[a-zA-Z_][a-zA-Z0-9_]{2,19}$/;
+                let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+                let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+                let phoneregex = /^((\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$/;
 
-    function validateForm(){ 
-        for (var i = 0; i < inputs.length; i++) {
-                if (!inputs[i].value) {
-                    alert("Please fill in all Required fields.");
+    
+                if (!usernameRegex.test(document.getElementById('box1').value)) {
+                    alert("Username must start with letter and should be greater than 3 characters.");
                     return false;
                 }
+    
+                if (!emailRegex.test(document.getElementById('box2').value)) {
+                    alert("Invalid Email Address.");
+                    return false;
+                }
+    
+                if (!passwordRegex.test(document.getElementById('box3').value)) {
+                    alert("Password must be at least 8 characters long and include at least one letter and one number.");
+                    return false;
+                }
+                
+    
+                return true;
             }
-            
-            return true;
-
-
-    }
-    function submitForm() {
-            validateForm();
+    
+            function submitForm(event) {
+        if (validateForm()) {
+            document.getElementById('form1').submit();
+        } else {
+            event.preventDefault(); 
         }
-</script>
+    }
+
+    document.getElementById('form1').addEventListener('submit', submitForm);
+        </script>
     </body>
 </html>
