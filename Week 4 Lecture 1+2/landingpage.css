@@ -133,5 +133,41 @@ body {
   }
   
 
-
-
+@media screen and (max-width: 900px) {
+    .imgbox {
+      padding: 0 10px;
+    }
+  
+    .menu {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .englishbtn {
+      display: none;
+    }
+  
+    .joinbtn {
+      margin-top: 10px;
+    }
+  
+    .search-form {
+      max-width: 100%;
+    }
+  
+    .search-form input {
+      border-radius: 4px;
+      margin-right: 0;
+    }
+  
+    .search-form button {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+    body {
+      overflow: hidden; 
+    }
+  }
+  
