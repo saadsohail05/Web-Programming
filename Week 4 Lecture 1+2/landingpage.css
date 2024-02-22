@@ -27,7 +27,6 @@ body {
 .menu {
   display: flex;
   align-items: center;
-  list-style: none;
   gap: 30px;
 }
 
@@ -37,21 +36,102 @@ body {
   text-decoration: none;
 }
 
-.language-item {
+.englishbtn {
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-.language-item span {
+.englishbtn span {
   font-size: 16px;
 }
 
 
-
-.join-btn{
+.joinbtn{
   border: 1px solid #fff;
   padding: 8px 15px;
   border-radius: 4px;
 }
+
+
+
+.herodiv {
+    height: 100vh;
+    background-image: url("./bg.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+  }
+  
+ .content {
+    max-width: 1280px;
+    margin: 0 auto 40px;
+    width: 100%;
+  }
+  
+  .content h1 {
+    color: #fff;
+    font-size: 3rem;
+    max-width: 630px;
+    line-height: 65px;
+  }
+  
+  .searchform {
+    height: 48px;
+    display: flex;
+    max-width: 630px;
+    margin-top: 30px;
+  }
+  
+  .searchform input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 1rem;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .searchform button {
+    height: 100%;
+    width: 60px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1dbf73;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+
+  }
+
+  .tagdiv {
+    display: flex;
+    color: #fff;
+    gap: 25px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 25px;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 15px;
+    align-items: center;    
+  }
+  
+  .tags a {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 4px 12px;
+    border-radius: 50px;
+ 
+  }
+  
+
+
 
