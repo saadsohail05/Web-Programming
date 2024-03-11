@@ -37,13 +37,13 @@ I have created an HTML page with various elements (div, p, button) each having a
 
 ## Task 06 : Finding Total Width of an Element
 ### Description
-I have calculated the total width of the "<p>" element using jQuery's outerWidth() method, including its width, padding, and border. The calculated total width is then displayed.
+I have calculated the total width of the p element using jQuery's outerWidth() method, including its width, padding, and border. The calculated total width is then displayed.
 ### Screenshots
 ![alt text](<Task 06 Screenshot.png>)
 
 ## Task 07 : Counting Number of "p" Elements
 ### Description
-I have created an HTML page with a div container that contains several "<p>" elements. Using jQuery, I have counted the number of child "<p>" elements inside the container div with the ID "selected". The count is then displayed within a div with the class "text".
+I have created an HTML page with a div container that contains several p elements. Using jQuery, I have counted the number of child p elements inside the container div with the ID "selected". The count is then displayed within a div with the class "text".
 
 ### Screenshots
 ![alt text](<Task 07 Screenshot.png>)
