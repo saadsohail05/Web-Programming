@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <table id="table1" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Section</th>
+                <th>Remove Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Saad</td>
+                <td>C</td>
+                <td><button class="remove">Remove</button></td>
+            </tr>
+            <tr>
+                <td>Ali</td>
+                <td>A</td>
+                <td><button class="remove">Remove</button></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <script>
+        $(document).ready(function () {
+            $(".remove").click(function () {
+                $(this).closest("tr").remove();
+            });
+        });
+
+    </script>
+</body>
+</html>
