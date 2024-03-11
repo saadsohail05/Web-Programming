@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="info">
+        <p>Click Element to See Its Class and Id:</p>
+    </div>
+
+    <div class="divclass1" id="divid1">Element 1</div>
+    <p class="paraclass1" id="paraid1">Element 2</p>
+    <button class="btnclass1" id="btnid1">Element 3</button>
+
+    <script>
+        $(document).ready(function () {
+            $("[class]").click(function () {
+                var elementClass = $(this).attr("class");
+                var elementId = $(this).attr("id");
+                
+                $(".info").html("<p>Class: " + elementClass + "<br>ID: " + elementId + "</p>");
+            });
+        });
+    </script>
+</body>
+</html>
