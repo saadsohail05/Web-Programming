@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<style>
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        height: 250px;
+        width: 250px;
+    }
+    #imagecontainer {
+        height: 250px;
+        width: 250px;
+    }
+
+</style>
+<body>
+    <div class="main">
+    <div id="imagecontainer">
+    <img src="https://mars.nasa.gov/layout/msr/images/home/8-sample-recovery-helicopters.jpg" alt="Image">  
+  </div>
+    <button id="togglebtn">Show</button>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#togglebtn").click(function () {
+            $("#imagecontainer").toggle(); 
+            var button = ($("#imagecontainer").is(":visible")) ? "Hide" : "Show";
+            $("#togglebtn").text(button); 
+        });
+    });
+
+</script>
+</body>
+</html>
