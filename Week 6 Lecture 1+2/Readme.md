@@ -2,7 +2,7 @@
 # Tasks
 ## Task 01 : Comments in Html,Css and JavaScript
 ### Description
-I have created an HTML file that demonstrates the use of comments in HTML, CSS, and JavaScript. The code includes examples of single-line and multi-line comments in each of these languages, showcasing the proper syntax and structure for adding comments to your code
+I have created an HTML file that demonstrates the use of comments in HTML, CSS, and JavaScript. The code includes examples of single-line and multi-line comments in each of these languages, showcasing the proper syntax and structure for adding comments to your code.
 
 ## Task 02 : Alert Messege Using Jquery
 ### Description
@@ -29,7 +29,7 @@ I have created an HTML table with rows containing data and a "Remove" button. Us
 
 ## Task 05 : Finding Class and Id of Clicked Element
 ### Description
-I have created an HTML page with various elements (div, p, button) each having a class and an ID attribute. Using jQuery, you have added an event listener that displays the class and ID of the clicked element.
+I have created an HTML page with various elements (div, p, button) each having a class and an ID attribute. Using jQuery, I have added an event listener that displays the class and ID of the clicked element.
 
 ### Screenshots
 ![alt text](<Task 05 Screenshot.png>)
@@ -37,8 +37,7 @@ I have created an HTML page with various elements (div, p, button) each having a
 
 ## Task 06 : Finding Total Width of an Element
 ### Description
-I have created an HTML page with various elements (div, p, button) each having a class and an ID attribute. Using jQuery, you have added an event listener that displays the class and ID of the clicked element.
-
+I have calculated the total width of the <p> element using jQuery's outerWidth() method, including its width, padding, and border. The calculated total width is then displayed.
 ### Screenshots
 ![alt text](<Task 06 Screenshot.png>)
 
