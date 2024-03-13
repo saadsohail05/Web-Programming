@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+   
+</head>
+<style>
+  
+   
+ 
+    
+    .container{
+        border: 2px solid wheat;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 20rem;
+        height: 20rem;
+        overflow: hidden;
+        border: 5px solid #ff6700;
+        box-shadow: 0 0 25px #ff6700;
+        border-radius: 10px;
+    }
+     .searchbtn{
+    
+        width: 10rem;
+        height: 2rem;
+        border: 2px solid #ff6700;
+        outline: none;
+        border-radius: 40px;
+        cursor: pointer;
+        background: linear-gradient(45deg,#000000,#ff6700);
+     
+    }
+        button img{
+        width:1rem;
+        padding-top: 0.1rem;
+      
+          
+        }
+    #cityname{
+        
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid white;
+        color: white;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        padding-top:7.5rem ;
+        background-color: #3f0d12;
+
+
+    }
+    h3,h5{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    }
+    .textdiv{
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    ::placeholder {
+        color: #D3D3D3;
+        text-align: center;
+        justify-content: center;
+        font-size: 0.7rem;
+      
+    }
+    .getlocbtn {
+        position: relative;
+        width: 13rem;
+        height: 2rem;
+        border: 2px solid #ff6700;
+        outline: none;
+        border-radius: 40px;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+        background: linear-gradient(45deg,#000000,#ff6700);
+   
+    
+    }
+    .btncontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+  .btncontainer button {
+        margin: 0 1rem;
+    }
+    .subdiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 20rem;
+        height: 20rem;
+    }
+    .hcontainer{
+        padding-top: 1rem;
+     
+    }
+    .btnsearchdiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 2rem;
+       
+     
+    }
+
+   
+</style
+<body>
+   <div class="container">
+    <div class="hcontainer">
+        <header>
+            <h3>Weather Application</h3>
+        </header>
+    
+    </div>
+    <div class="subdiv">
+        <div class="formcontainer">
+            <form id="weatherform" action="./Task 02-Weather App.html" method="GET" >
+                <input type="text" placeholder="Enter City Name" id="cityname">
+                <div class="btnsearchdiv">
+                    <button class="searchbtn" onclick="submitform(event)"><img src="./searchicon2.png" alt="Search"></button>
+                </div>
+             
+               </form>
+               <div class="textdiv"><h5>OR</h5></div>
+           </div>
+           <div class="btncontainer">
+            <button onclick="getDeviceLocation()" class="getlocbtn">Get Device Location</button>
+           </div>
+    
+    </div>
+  
+
+
+   </div>
+   
+  <script>
+    function submitform() {
+        var cityName = document.getElementById("cityname").value;
+        console.log(cityName);
+        if (cityName.trim() !== "") {
+            var secondPageURL = "./Task%2002-Weather%20App.html?city=" + cityName;
+            window.open(secondPageURL, "_blank");
+        }
+    }
+    function getDeviceLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                const geocodingApi = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
+                fetch(geocodingApi).then(response => response.json()).then(data => {
+                        const cityName = data.address.city;
+                        document.getElementById("cityname").value = cityName;
+                        // Now you can trigger the weather request for the new city
+                    
+                    })
+            });
+        } 
+    }
+  </script>
+</body>
+</html> 

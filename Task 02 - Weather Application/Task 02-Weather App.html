@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+</head>
+<style>
+    .main{
+        display: flex;
+        border: 5px solid #ff6700;
+        box-shadow: 0 0 25px #ff6700;
+        border-radius: 10px;
+    
+    }
+    .dayscontainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 28rem;
+        height: 30rem;
+        overflow: hidden;
+        border-left:5px solid #ff6700;
+       
+
+
+    }
+    .container{
+        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 28rem;
+        height: 30rem;
+        overflow: hidden;
+      
+        
+    }
+ 
+
+    body{
+        display: flex;
+        justify-content: center;
+        padding-top:3rem ;
+        background-color: #3f0d12;
+    }
+    h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    }
+
+    .hcontainer{
+  
+        text-align: center;
+    }
+    
+    button img{
+        width:1rem;
+        padding-top: 0.1rem;
+      
+          
+        }
+        .backbtncontainer{
+            display: flex;
+        
+            justify-content: start;
+            flex-direction: column;
+            width: 27rem;
+            padding-top: 0.3rem;
+        
+        }
+        .backbtn{
+            width: 2.5rem;
+            background-color: transparent;
+            border-radius: 1.5rem;
+        }
+        #weatherimg{
+            width: 8rem;
+        }
+        h2,h4{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+            text-align: center;
+           
+            
+        }
+        .subcontainer{
+       
+        padding-top: 0.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around;
+        margin: 0px;
+        padding: 0%;
+        width: 20rem;
+          
+        }
+      .desc,h4{
+        margin-bottom: -0.5rem;
+      }
+    .icon{
+     margin-bottom: -0.5rem;
+    }
+    .footer{
+     
+        width: 25rem;
+        height:7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .feelslikecon,.windspeedcon{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+      padding-left: 3rem;
+      padding-right: 3rem;
+  
+
+    }
+    .windspeedcon{
+        padding-top: 5px;
+    }
+  
+    .imgfeels,.imgwind{
+        width:3rem
+    }
+    .textfeels,.windtext{
+        color: white;
+      
+    }
+    .textfeels{
+        padding-top: 5px;
+   
+    }
+    .windtext{
+        padding-top: 9px;
+    }
+    .h2container{
+        padding-top: 1.8rem;
+    }
+    h5{
+        margin-top: 0;
+        color: white;
+        margin-bottom: 0; 
+        border-bottom: 1px solid white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    span{
+       
+        margin-top: 9px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      
+    }
+    .days{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .day1,.day2,.day3,.day4{
+        border: 1px solid orange;
+        align-items: center;
+        width: 9rem;
+        height: 5rem;
+        text-align: center;
+    
+    }
+    @media screen and (max-width: 887px) {
+       
+        .main {
+            flex-direction: column; 
+        }
+;
+    }
+</style
+
+<body onload="request()">
+    <div class="main">
+   <div class="container">
+    <div class="topcontainer">
+        <div class="backbtncontainer">
+            <form action="./Task 02-Input Form.html">
+            <button class="backbtn" action>
+                <img src="./backbtn.png" alt="">
+            </button>
+        </form>
+        <div class="hcontainer">
+            <header>
+                <h3>Weather Application</h3>
+            </header>
+        </div>
+    </div>
+    </div>
+    <div class="subcontainer">
+      
+       
+       <div class="icon">
+        <img id="weatherimg" src="./sun.png" alt="Sunny">
+       </div>
+       <h2 id="desc">Sunny</h2>
+       <h4 id="city">Faisalabad</h4>
+       <h2 id="temp">24°C</h2>
+   
+    </div>
+    <div class="footer">
+        <div class="feelslikecon">
+            <img class="imgfeels" src="./feelslike.png" alt="FeelsLike">
+            <div class="textfeels">
+                <span id="fl">
+                    Feels Like
+                </span>
+            </div>
+            <h4 id="feelsliketemp"></h4>
+        </div>
+        <div class="windspeedcon">
+            <img class="imgwind" src="./windspeed.png" alt="Windspeed">
+            <div class="windtext">
+                <span id="ws">
+                   Wind Speed
+                </span>
+
+
+        </div>
+        <h4 id="windspeed"></h4>
+    </div>
+  
+
+
+   </div>
+   </div>
+   <div class="dayscontainer">
+    <div class="h2container">
+        <header>
+            <h3>5 Days Forecast</h3>
+        </header>
+    <div class="days">
+        <div class="day1">
+            <h5 id="day1name"></h5>
+            <span>Temp:</span>
+            <span id="day1temp">24</span><br>
+            <span>Feels Like:</span>
+            <span id="fl1"></span><br>
+            <span>Wind Speed:</span>
+            <span id="ws1"></span>
+
+
+        </div>
+        <div class="day2">
+            <h5 id="day2name"></h5>
+            <span>Temp:</span>
+            <span id="day2temp">24</span><br>
+            <span>Feels Like:</span>
+            <span id="fl2"></span><br>
+            <span>Wind Speed:</span>
+            <span id="ws2"></span>
+
+        </div>
+        <div class="day3">
+            <h5 id="day3name"></h5>
+            <span>Temp:</span>
+            <span id="day3temp">24</span><br>
+            <span>Feels Like:</span>
+            <span id="fl3"></span><br>
+            <span>Wind Speed:</span>
+            <span id="ws3"></span>
+
+        </div>
+        <div class="day4">
+            <h5 id="day4name"></h5>
+            <span>Temp:</span>
+            <span id="day4temp">24</span><br>
+            <span>Feels Like:</span>
+            <span id="fl4"></span><br>
+            <span>Wind Speed:</span>
+            <span id="ws4"></span>
+
+        </div>
+     
+
+    </div>
+
+   </div>
+</div>
+   <script>
+    
+var ncityname = window.location.search.replace("?city=", "");
+console.log(ncityname);
+
+
+
+function request() {
+   let api= 'https://api.openweathermap.org/data/2.5/forecast?q=' + ncityname +'&appid=18fe67a710a144555f43f698de3e29df&units=metric'
+    //let api = 'https://api.openweathermap.org/data/2.5/weather?q=' + ncityname + '&appid=18fe67a710a144555f43f698de3e29df&units=metric'
+     fetch(api).then((response) => {
+         response.json().then((result) => {
+            console.log(result);
+             filldata(result)
+         });
+     });
+
+}
+window.onload = function() {
+    request();
+}
+function filldata(info){
+    const forecastData = info.list.slice(0, 40);
+    const currentWeather = forecastData[0];
+    $("#city").html(info.city.name);
+    $("#temp").html(Math.floor(currentWeather.main.temp) + '°C');
+    $("#desc").html(currentWeather.weather[0].description);
+    $("#fl").html(Math.floor(currentWeather.main.feels_like) + '°C');
+    $("#ws").html(Math.floor(currentWeather.wind.speed * 3.6) + 'Km/H');
+    var img = document.getElementById("weatherimg");
+    var id=currentWeather.weather[0].id;
+    if (id==800){
+        img.src = "./sun.png";
+    }
+    else if(id>200&&id<232){
+        img.src = "./thunderstrom.png";
+    }
+    else if(id>300&&id<321){
+        img.src = "./drizzle.png";
+    }
+    else if(id>500&&id<531){
+        img.src = "./rainyweather.png";
+    }
+    else if(id>600 && id<622){
+        img.src = "./snowweather.png";
+    }
+    else if(id>701 && id<781){
+        img.src = "./partly cloudy.png";
+    }
+    else if(id>801&&id<=804){
+        img.src = "./thunderstrom.png";
+    }
+    
+    for (let i = 1; i <= 4; i++) {
+        const day = forecastData[i * 8];
+        $(`#day${i}name`).html(getDayName(day.dt));
+        $(`#day${i}temp`).html(Math.floor(day.main.temp) + '°C');
+        $(`#fl${i}`).html(Math.floor(day.main.feels_like) + '°C');
+        $(`#ws${i}`).html(Math.floor(day.wind.speed * 3.6) + 'Km/H');
+    }
+    function getDayName(timestamp) {
+        const days = ['Saturday','Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+        const date = new Date(timestamp * 1000);
+        return days[date.getDay()];
+    }
+}
+
+   </script>    
+  
+</body>
+</html> 
