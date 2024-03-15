@@ -20,6 +20,7 @@ This project utilizes the following technologies:
 ![CSS Logo](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 - **Bootstrap:** Front-end framework for responsive and modern design. 
 ![Bootstrap Logo](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 - **jQuery:** JavaScript library for simplifying HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
 ![jQuery Logo](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
