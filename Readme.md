@@ -20,6 +20,8 @@ This project utilizes the following technologies:
 ![CSS Logo](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 - **Bootstrap:** Front-end framework for responsive and modern design. 
 ![Bootstrap Logo](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+- **jQuery:** JavaScript library for simplifying HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
+![jQuery Logo](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
 These technologies come together to create a dynamic and visually appealing web experience. Explore the code to see how they are implemented in different assignments and class activities.
 ## Installation
@@ -39,13 +41,15 @@ git clone https://github.com/saadsohail05/Web-Programming.git
 git checkout branch-name 
 
 ```
-5. Replace branch-name with one of the following: Assignment-01, Class-Activities, or main.
+5. Replace branch-name with one of the following: Assignment-01, Assignment-02, Assignment-03, Class-Activities, or main.
 
 ## Folder Structure
 
 The repository is organized into the following folders based on the branches:
 
 - **Assignment-01:** Contains code and resources related to Assignment 01.
+- **Assignment-02:** Contains code and resources related to Assignment 02.
+- **Assignment-03:** Contains code and resources related to Assignment 03.
 - **Class-Activities:** Includes code and materials from various class activities.
 - **Main:** Main branch with the latest stable code.
 
