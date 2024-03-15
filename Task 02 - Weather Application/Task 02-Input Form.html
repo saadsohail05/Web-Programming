@@ -173,9 +173,10 @@
                 const longitude = position.coords.longitude;
                 const geocodingApi = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
                 fetch(geocodingApi).then(response => response.json()).then(data => {
-                        const cityName = data.address.city;
+                        let cityName = data.address.city;
+                        cityName = cityName.split(' ')[0];
                         document.getElementById("cityname").value = cityName;
-                        // Now you can trigger the weather request for the new city
+                       
                     
                     })
             });
