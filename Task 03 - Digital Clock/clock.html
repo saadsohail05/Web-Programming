@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: all 0.4s linear ease-in;
+}
+.maincontainer{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#000807;
+  padding: 0 20px;
+}
+
+.subcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  max-width: 560px;
+  width: 100%;
+  background:#A2A3BB;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+}
+
+.timeboxcontainer{
+  display: flex;
+  align-items: center;
+
+}
+.time-box1,.time-box2,.time-box3{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.ampm{
+  position: absolute;
+  top: 0;
+  right: -50px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.time-text{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: #B3B7EE;
+  border-radius: 6px;
+}
+.time-text,
+.colon{
+  font-size: 35px;
+  font-weight: 600;
+}
+.colon{
+  font-size: 40px;
+  margin: 0 10px;
+}
+.text{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+</style>
+
+<body>
+    <div class="maincontainer">
+      <div class="subcontainer">
+        <div class="timeboxcontainer">
+          <div class="time-box1">
+            <div class="time-text">
+              <span class="hour">00</span>
+              <span class="text">Hours</span>
+            </div>
+            <span class="colon">:</span>
+          </div>
+          <div class="time-box2">
+            <div class="time-text">
+              <span class="min">00</span>
+              <span class="text">Minutes</span>
+            </div>
+            <span class="colon">:</span>
+          </div>
+          <div class="time-box3">
+            <div class="time-text">
+              <span class="sec">00</span>
+              <span class="text">Seconds</span>
+            </div>
+            <span class="ampm">AM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <script>
+        $(document).ready(function() {
+          setInterval(function() {
+            let date = new Date(),
+              hour = date.getHours(),
+              min = date.getMinutes(),
+              sec = date.getSeconds();
+      
+            let d;
+            d = hour < 12 ? "AM" : "PM";
+            hour = hour > 12 ? hour - 12 : hour;
+            hour = hour == 0 ? (hour = 12) : hour;
+      
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+      
+            $(".hour").text(hour);
+            $(".min").text(min);
+            $(".sec").text(sec);
+            $(".ampm").text(d);
+          }, 1000);
+        });
+      </script>
+</html>
