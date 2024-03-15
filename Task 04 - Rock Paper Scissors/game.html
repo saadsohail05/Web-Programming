@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=\, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="./game.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./game.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="headingcontainer">
+                <h2>Rock Paper Scissors</h2>
+            </div>
+            <div class="optionscontainer">
+                <div class="usercontainer">
+                    <div>
+                        <span>User</span>
+                        <div class="userImage" >
+                            <img id="userImage" style="margin-top: 5px;" src="./user.png" alt="User" width="110" height="110">
+                        </div>
+                    </div>
+                </div>
+                <div class="computercontainer">
+                    <div>
+                       <span>Computer</span>
+                        <div class="computerImage" >
+                            <img id="computerImage" style="margin-top: 5px;" src="./computer.png" alt="Computer" width="103" height="115" >
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="scoreboard">
+                <div class="badge" id="userlabel">USER</div>
+                <div class="badge" id="cpulabel">CPU</div>
+                <span id="userscore">0</span>:<span id="cpuscore">0</span>
+              </div>
+              <div class="result">
+                <h5 class="resultLabel" id="result">RESULT</h5>
+            </div>
+            
+            <div class="choice">
+                <h5>Choose an option:</h5>
+                <button className="button" class="btn" id="rock">ROCK</button>
+                <button className="button" class="btn" id="paper">PAPER</button>
+                <button className="button" class="btn" id="scissors">SCISSORS</button>
+            </div>
+          
+             <div class="resetcontainer">
+            <button class="resetbtn" id="reset">RESET SCORE</button>
+        </div>
+    
+        </div>
+
+    </body>
+    
+</html>
