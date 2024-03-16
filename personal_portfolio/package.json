@@ -1,7 +1,8 @@
 {
   "name": "web-programming",
   "version": "1.0.0",
-  "description": "Personal Portfolio",
+  "description": "Welcome to the Assignment 03 branch! This branch contains the code for the third assignment. This Assignment includes implementation of Personal Portfolio,Weather App, Digital Clock App and Rock Paper Scissors Game using HTML,CSS3,Bootstrap,JavaScript,Tailwind CSS and jQuery.",
+  "main": "index.js",
   "scripts": {
     "Start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
