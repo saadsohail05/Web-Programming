@@ -1,0 +1,22 @@
+/*	Typefaces  */
+
+@font-face
+{	font-family: "Graphik";
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url("../fonts/graphik/regular.woff2.html") format("woff2"); }
+
+@font-face
+{	font-family: "Graphik";
+	font-style: normal;
+	font-weight: 500;
+	font-display: block;
+	src: url("../fonts/graphik/medium.woff2.html") format("woff2"); }
+
+@font-face
+{	font-family: "Garbata";
+	font-style: normal;
+	font-weight: 300;
+	font-display: block;
+	src: url("../fonts/garbata/light.woff2.html") format("woff2"); }

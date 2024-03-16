@@ -1,0 +1,55 @@
+/*	Light Theme  */
+
+:root
+{		color-scheme: light dark;
+
+		--background:		#fff;
+		--foreground:		#000;
+
+		--neutral-100:		#4d555f;
+		--neutral-60:		rgba(77,85,95,.6);
+		--neutral-15:		rgba(77,85,95,.2);
+		--neutral-5:		rgba(77,85,95,.08);
+
+		--accent-100:		#ff6347;
+		--accent-60:		rgba(255,99,71,.6);
+		--accent-15:		rgba(255,99,71,.2); }
+
+@supports (color: color(display-p3 1 0 0))
+{	:root
+	{	--neutral-100:		color(display-p3 .3 .33 .37);
+		--neutral-60:		color(display-p3 .3 .33 .37 / .6);
+		--neutral-15:		color(display-p3 .3 .33 .37 / .2);
+		--neutral-5:		color(display-p3 .3 .33 .37 / .08);
+
+		--accent-100:		color(display-p3 1 .4 .3);
+		--accent-60:		color(display-p3 1 .4 .3 / .6);
+		--accent-15:		color(display-p3 1 .4 .3 / .2); } }
+
+
+/*	Dark Theme  */
+
+@media (prefers-color-scheme: dark)
+{	:root
+	{		--background:		#000;
+			--foreground:		#fff;
+
+			--neutral-100:		#9ab;
+			--neutral-60:		rgba(153,170,187,.6);
+			--neutral-15:		rgba(153,170,187,.2);
+			--neutral-5:		rgba(153,170,187,.1);
+
+			--accent-100:		rgb(255,138,0);
+			--accent-60:		rgba(255,138,0,.6);
+			--accent-15:		rgba(255,138,0,.2); }
+
+	@supports (color: color(display-p3 1 0 0))
+	{	:root
+		{	--neutral-100:		color(display-p3 .6 .65 .75);
+			--neutral-60:		color(display-p3 .6 .65 .75 / .6);
+			--neutral-15:		color(display-p3 .6 .65 .75 / .2);
+			--neutral-5:		color(display-p3 .6 .65 .75 / .1);
+
+			--accent-100:		color(display-p3 1 .54 0);
+			--accent-60:		color(display-p3 1 .54 0 / .6);
+			--accent-15:		color(display-p3 1 .54 0 / .2); } } }
