@@ -1,0 +1,43 @@
+/*	Imports  */
+
+@import "fonts.css";
+@import "colors.css";
+@import "basics.css";
+@import "layout.css";
+@import "header.css";
+@import "footer.css";
+
+
+/*	Links  */
+
+header { margin-bottom: -40px; }
+
+header:before { display: none; }
+
+section div { row-gap: 32px; }
+
+section div p:first-child { margin: 8px 0 4px 0; }
+
+section div p a { display: inline-block; }
+
+section div p .small { margin-left: 0; }
+
+#bitcoin { margin-top: -8px; }
+
+section .column-3-4
+{	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 80px; }
+
+@media (max-width: 1024px)
+{	section > div:first-child { margin-bottom: 16px; } }
+
+@media (max-width: 720px)
+{	.column-3-4 { grid-template-columns: 1fr 1fr !important; } }
+
+@media (max-width: 480px)
+{	.column-3-4 { grid-template-columns: 1fr !important; }
+
+	section > div:first-child { margin-bottom: 0; }
+
+	section div { row-gap: 16px; } }
